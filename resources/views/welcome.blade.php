@@ -58,10 +58,9 @@
                         </nav>
                         <div class="header__select select">
                             <select class="select__default" name="lanquage" onchange="top.location=this.value">
-                                <option class="lang-ru" value="/lang/ru">RUS</option>
-                                <option class="lang-en" value="/lang/en" selected>ENG</option>
-                                <option class="lang-es" value="/lang/es">ESP</option>
-                                <option class="lang-ar" value="/lang/ar">العربية</option>
+                                @foreach(config('languages') as $key => $value)
+                                    <option class="lang-{{ strtolower($key) }}" value="{{ route('lang', ['lang' => $key]) }}" @if(App::isLocale($key)) selected @endif>{{ $value }} {{ App::getLocale() }}</option>
+                                @endforeach
                             </select>
                             <button class="select__btn" type="button">
                                 <div class="select__item" data-select-item="lang-en">
@@ -638,10 +637,9 @@
                     </h4>
                     <div class="footer__select select">
                         <select class="select__default" name="lanquage" onchange="top.location=this.value">
-                            <option class="lang-ru" value="/lang/ru">RUS</option>
-                            <option class="lang-en" value="/lang/en" selected>ENG</option>
-                            <option class="lang-es" value="/lang/es">ESP</option>
-                            <option class="lang-ar" value="/lang/ar">العربية</option>
+                            @foreach(config('languages') as $key => $value)
+                                <option class="lang-{{ strtolower($key) }}" value="{{ route('lang', ['lang' => $key]) }}" @if(App::isLocale($key)) selected @endif>{{ $value }} {{ App::getLocale() }}</option>
+                            @endforeach
                         </select>
                         <button class="select__btn" type="button">
                             <div class="select__item" data-select-item="lang-en">

@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+$locale = Request::segment(1);
+
+if (array_key_exists($locale, config('languages'))) {
+    \App::setLocale($locale);
+} else {
+    $locale = null;
+}
+
+Route::group(array('prefix' => $locale), function () {
+    Route::view('/', 'welcome');
+
+    Route::get('/lang/{lang}', [\App\Http\Controllers\LanguageController::class, 'switch'])->name('lang');
 });
