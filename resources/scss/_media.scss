@@ -1,0 +1,261 @@
+// =========================================== 1300 ==================================================
+// =========================================== 1300 ==================================================
+
+@media (max-width: 1300px) {
+  .stages {
+    background: url("/images/bg/bottom-left-angle-decor.png") 0px calc(100% + 360px) no-repeat;
+    &__inner {
+      max-width: none;
+      margin: 0;
+    }
+  }
+}
+
+// =========================================== 1200 ==================================================
+// =========================================== 1200 ==================================================
+
+@media (max-width: 1200px) {
+  .action-row {
+    &__inner {
+      border-radius: 58px 0px;
+      padding: 25px 27.5px 50px 12.5px;
+    }
+    &__list {
+      flex-wrap: wrap;
+      margin-bottom: -35px;
+    }
+    &__item {
+      flex-basis: 50%;
+      margin-bottom: 35px;
+    }
+    &__btn {
+      &::before {
+        inset: -15px -25px -25px -20px;
+        border-radius: 37px 0px;
+      }
+    }
+  }
+  // -----------------------------------------
+  .about {
+    &__video {
+      display: none;
+    }
+    &__inner {
+      max-width: none;
+    }
+  }
+  // -----------------------------------------
+  .crypto {
+    &__grid {
+      grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    }
+  }
+}
+
+// =========================================== 1100 ==================================================
+// =========================================== 1100 ==================================================
+
+@media (max-width: 1100px) {
+  .header {
+    &__logo-mobile {
+      display: inline-block;
+    }
+    &__logo {
+      display: none;
+    }
+    &__menu {
+      position: fixed;
+      top: 0;
+      left: auto;
+      right: 0;
+      bottom: 0;
+      width: 320px;
+      background: #ffffff;
+      color: $dark;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 60px;
+      transform: translateX(100%);
+      transition: all 0.2s;
+      &--show {
+        transform: translateX(0%);
+        box-shadow: #59656c9e 9.642px 8.801px 25px 0px;
+      }
+    }
+    &__nav-list {
+      flex-direction: column;
+      align-items: center;
+      @include adaptiveValue("margin-bottom", 120, 40);
+    }
+    &__nav-link {
+      padding: 1vh 0;
+    }
+    &__burger {
+      display: flex;
+    }
+  }
+  // -----------------------------------------
+  .footer {
+    &__inner {
+      grid-template-rows: min-content 1fr;
+      grid-template-columns: 7fr 7fr min-content max-content;
+    }
+    &__logo {
+      grid-column: 1 / -1;
+    }
+  }
+}
+@media (max-width: 1100px) and (orientation: portrait) {
+  .main {
+    &__action-row {
+      margin-top: -30vh;
+    }
+  }
+}
+
+// =========================================== 950 ==================================================
+// =========================================== 950 ==================================================
+
+@media (max-width: 950px) {
+  .crypto {
+    &__grid {
+      grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+    }
+  }
+  // -----------------------------------------
+  .footer {
+    &__inner {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__socials {
+      grid-template: auto / repeat(5, min-content);
+    }
+  }
+}
+
+// =========================================== 768 ==================================================
+// =========================================== 768 ==================================================
+
+@media (max-width: 768px) {
+  .action-row {
+    &__item {
+      flex-basis: 100%;
+    }
+    &__period {
+      margin: 0;
+    }
+    &__period,
+    &__price {
+      span {
+        display: inline;
+      }
+    }
+  }
+  // -----------------------------------------
+  .contacts {
+    &__inner {
+      flex-direction: column;
+    }
+    &__heading {
+      margin: 0 0 30px 0;
+      text-align: center;
+    }
+  }
+}
+
+// =========================================== 650 ==================================================
+// =========================================== 650 ==================================================
+
+@media (max-width: 650px) {
+  .stages {
+    background-size: calc(100% + 80px) auto;
+    background-position-y: calc(100% + 60px);
+  }
+  //------------------------------------------
+  .crypto {
+    &__grid {
+      grid-template: auto / auto;
+    }
+  }
+  //------------------------------------------
+  .price {
+    background-size: contain;
+  }
+}
+
+// =========================================== 560 ==================================================
+// =========================================== 560 ==================================================
+
+@media (max-width: 560px) {
+  .action-row {
+    &__inner {
+      box-shadow: #b9c4ca 16.642px 15.801px 35px 0px;
+    }
+    &__btn {
+      &::before {
+        box-shadow: #b9c4ca 16.642px 15.801px 35px 0px;
+      }
+    }
+  }
+  // -----------------------------------------
+  .services {
+    .container {
+      max-width: 1470px;
+      padding: 0 15px;
+    }
+    &__swiper {
+      padding-bottom: 80px;
+    }
+    &__prev,
+    &__next {
+      top: auto;
+    }
+    &__prev {
+      right: 50%;
+    }
+    &__next {
+      left: 50%;
+    }
+  }
+  // -----------------------------------------
+  .stages {
+    &__item {
+      align-items: stretch;
+    }
+  }
+  // -----------------------------------------
+  .footer {
+    &__inner {
+      grid-template: auto / auto;
+    }
+  }
+}
+
+// =========================================== 450 ==================================================
+// =========================================== 450 ==================================================
+
+@media (max-width: 450px) {
+  .action-row {
+    &__period {
+      margin-bottom: 10px;
+    }
+    &__period,
+    &__price {
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+// =========================================== 1920 ==================================================
+// =========================================== 1920 ==================================================
+
+@media (min-width: 1920px) {
+  .main {
+    &__action-row {
+      margin-top: -255px;
+    }
+  }
+}
