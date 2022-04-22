@@ -522,7 +522,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
-          <a class="footer__logo logo" href="#body">
+          <a class="footer__logo logo" data-anchor href="#body">
             <img src="/images/icons/logos/footer-logo.png" alt="Logo ProfixSoft">
           </a>
           <div class="footer__col">
