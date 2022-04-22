@@ -229,6 +229,9 @@
     &__inner {
       grid-template: auto / auto;
     }
+    &__quick-list {
+      grid-template-columns: auto;
+    }
   }
 }
 
@@ -236,6 +239,12 @@
 // =========================================== 450 ==================================================
 
 @media (max-width: 450px) {
+  .header {
+    &__menu {
+      width: 100%;
+    }
+  }
+  // -----------------------------------------
   .action-row {
     &__period {
       margin-bottom: 10px;

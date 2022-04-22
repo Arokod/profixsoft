@@ -531,14 +531,14 @@
             </h4>
             <div class="footer__col-list">
               <div class="footer__col-item">
-                ProfiXone Capital LLC
+                ProfiXone FZE
               </div>
               <div class="footer__col-item">
-                RegNo: 834 LLC 2021
+                RegNo: 1398
               </div>
               <div class="footer__col-item">
-                Suite 305, Griffith Corporate Centre, P.O.Box 1510, Beachmont, Kingstown, St. Vincent
-                and the Grenadines
+                Dubai World Trade Centre <br>
+                Sheikh Rashid Tower, 25
               </div>
             </div>
           </div>
@@ -546,7 +546,7 @@
             <h4 class="footer__title">
               Quick Links
             </h4>
-            <ul class="footer__col-list">
+            <ul class="footer__quick-list">
               <li class="footer__nav-item">
                 <a class="footer__nav-link" data-anchor href="#body">Home</a>
               </li>
@@ -573,7 +573,7 @@
               </li>
             </ul>
           </div>
-          <div class="footer__col">
+          <!-- <div class="footer__col">
             <h4 class="footer__title">
               Follow Us On
             </h4>
@@ -626,7 +626,7 @@
                 </a>
               </li>
             </ul>
-          </div>
+          </div> -->
           <div class="footer__col">
             <h4 class="footer__title">
               Choose Language

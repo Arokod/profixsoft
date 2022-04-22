@@ -361,7 +361,8 @@ body {
   font-size: rem(16);
   &__inner {
     display: grid;
-    grid-template-columns: min-content 7fr 7fr 4fr max-content;
+    // grid-template-columns: min-content 7fr 7fr 4fr max-content;
+    grid-template-columns: min-content 7fr 7fr max-content;
     @include adaptiveValue("gap", 45, 25);
   }
   &__logo {
@@ -382,6 +383,19 @@ body {
     }
   }
   &__col-link {
+    transition: all 0.5s;
+    &:hover {
+      color: $yellow;
+      transition: all 0.2s;
+    }
+  }
+  &__quick-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: -9px 0;
+  }
+  &__nav-link {
+    padding: 9px 0;
     transition: all 0.5s;
     &:hover {
       color: $yellow;
