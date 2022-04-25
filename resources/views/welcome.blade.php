@@ -672,13 +672,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous">
   </script>
   <script>
-    (function(w, d, u) {
-      var s = d.createElement('script');
-      s.async = true;
-      s.src = u + '?' + (Date.now() / 60000 | 0);
-      var h = d.getElementsByTagName('script')[0];
-      h.parentNode.insertBefore(s, h);
-    })(window, document, 'https://cdn-ru.bitrix24.ru/b17190490/crm/site_button/loader_3_4th6bg.js');
   </script>
   <script src="{{ mix('/js/main.js') }}"></script>
 </body>
