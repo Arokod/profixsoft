@@ -5,12 +5,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ProfiXsoft</title>
+  <link rel="shortcut icon" href="/images/icons/logos/fav-16px.png" type="image/x-icon">
   <link rel="stylesheet" href="{{ mix('/css/style.css') }}">
+  <title>ProfiXsoft</title>
 </head>
 
 <body id="body">
   <div class="wrapper">
+    <a class="up-btn" data-anchor href="#body"></a>
+    <div class="submit">
+      <div class="submit__overlay"></div>
+      <div class="submit__window">
+        <div class="submit__window-text">
+          Thank you, your requests will be processed soon.
+        </div>
+        <button type="button" class="submit__window-btn empty-btn">
+          <span>Close</span>
+        </button>
+      </div>
+    </div>
     <header class="header">
       <div class="header__video">
         <video autoplay muted loop>
@@ -22,11 +35,17 @@
         <div class="container">
           <div class="header__top-inner">
             <a class="header__logo-mobile logo" data-anchor href="#body">
-              <img src="/images/icons/logos/header-logo.png" alt="Logo ProfixSoft">
+              <picture>
+                <source srcset="/images/icons/logos/header-logo.png">
+                <img src="/images/icons/logos/header-logo.webp" alt="Logo ProfixSoft">
+              </picture>
             </a>
             <div class="header__menu">
               <a class="header__logo logo" data-anchor href="#body">
-                <img src="/images/icons/logos/header-logo.png" alt="Logo ProfixSoft">
+                <picture>
+                  <source srcset="/images/icons/logos/header-logo.png">
+                  <img src="/images/icons/logos/header-logo.webp" alt="Logo ProfixSoft">
+                </picture>
               </a>
               <nav class="header__nav">
                 <ul class="header__nav-list">
@@ -99,14 +118,14 @@
       <section class="header__hero home-hero">
         <div class="container">
           <div class="home-hero__inner">
-            <h1 class="home-hero__title">
+            <h1 class="home-hero__title _anim" data-animate>
               <span>
                 The ultimate solution
               </span>
               for modern business
               development
             </h1>
-            <p class="home-hero__text">
+            <p class="home-hero__text _anim-delay" data-animate>
               The future starts now, the future starts with crypto.
               Revolution your business by integrating blockchain
               solutions into your day-to-day activity.
@@ -120,29 +139,35 @@
         <div class="container">
           <div class="action-row__inner">
             <ul class="action-row__list">
-              <li class="action-row__item">
-                <h5 class="action-row__item-title">
-                  Software Development
-                </h5>
-                <p class="action-row__item-text">
-                  Full & integrated services for web & app development. Custom tech strategy.
-                </p>
+              <li class="action-row__item" data-animate>
+                <div class="action-row__item-inner">
+                  <h5 class="action-row__item-title">
+                    Software Development
+                  </h5>
+                  <p class="action-row__item-text">
+                    Full & integrated services for web & app development. Custom tech strategy.
+                  </p>
+                </div>
               </li>
-              <li class="action-row__item">
-                <h5 class="action-row__item-title">
-                  Maintenance & Updates
-                </h5>
-                <p class="action-row__item-text">
-                  Latest FinTech solutions. Constant support and up-to-date tactics to obtain the best results.
-                </p>
+              <li class="action-row__item" data-animate>
+                <div class="action-row__item-inner">
+                  <h5 class="action-row__item-title">
+                    Maintenance & Updates
+                  </h5>
+                  <p class="action-row__item-text">
+                    Latest FinTech solutions. Constant support and up-to-date tactics to obtain the best results.
+                  </p>
+                </div>
               </li>
-              <li class="action-row__item">
-                <h5 class="action-row__item-title">
-                  Technology For Crypto Development
-                </h5>
-                <p class="action-row__item-text">
-                  Enter gloriously the crypto era: attract more customers and scale your results through technology.
-                </p>
+              <li class="action-row__item" data-animate>
+                <div class="action-row__item-inner">
+                  <h5 class="action-row__item-title">
+                    Technology For Crypto Development
+                  </h5>
+                  <p class="action-row__item-text">
+                    Enter gloriously the crypto era: attract more customers and scale your results through technology.
+                  </p>
+                </div>
               </li>
               <li class="action-row__item">
                 <a class="action-row__btn" data-anchor href="#crypto">
@@ -159,7 +184,7 @@
         </div>
       </div>
       <section class="main__about about" id="about">
-        <div class="about__video">
+        <div class="about__video _anim-right-delay" data-animate>
           <video autoplay muted loop>
             <source src="/images/media/2.webm" type="video/webm">
             <source src="/images/media/2.mp4" type="video/mp4">
@@ -167,33 +192,41 @@
         </div>
         <div class="container">
           <div class="about__inner">
-            <div class="about__heading heading">
-              <h3 class="heading__subtitle">ABOUT uS</h3>
-              <h2 class="heading__title">
+            <div class="about__heading heading" data-animate>
+              <h3 class="heading__subtitle _anim-delay">ABOUT uS</h3>
+              <h2 class="heading__title _anim">
                 Discover our revolutionary technology <br> for revolutionary results
               </h2>
             </div>
             <div class="about__text">
-              <p class="about__p">
-                Being crypto passionates from the very beginning, we have turnedour passion into a successful. worldwide
-                recognized business. Starting with our own crypto company, our team has now the experience and knowledge
-                to deliver top-notch services to digitize any company yin the world. Our mission is to help other do the
-                same and be at least as successful as we are now.
-              </p>
-              <p class="about__p">
-                Our vision is to help every entrepreneur successful integrate blockchain technology into their business
-                so they can develop their company to the maximum. In short, we offer the maximum of security, quality
-                and professionalism with a minimum of investments.
-              </p>
-              <p class="about__p">
-                Nowadays, technology has become part of our lives. For entrepreneurs, keeping pace with these changes is
-                crucial. We are sure you too want to be up-to-date so you can remain a top decision for your clients.
-              </p>
-              <p class="about__p">
-                We have the solution: complete software development and design so you can accelerate your company’s
-                growth and scale the results. Process automation, data management, high-level security – one team,
-                everything you need.
-              </p>
+              <div class="about__p" data-animate>
+                <p class="_anim">
+                  Being crypto passionates from the very beginning, we have turnedour passion into a successful. worldwide
+                  recognized business. Starting with our own crypto company, our team has now the experience and knowledge
+                  to deliver top-notch services to digitize any company yin the world. Our mission is to help other do the
+                  same and be at least as successful as we are now.
+                </p>
+              </div>
+              <div class="about__p" data-animate>
+                <p class="_anim">
+                  Our vision is to help every entrepreneur successful integrate blockchain technology into their business
+                  so they can develop their company to the maximum. In short, we offer the maximum of security, quality
+                  and professionalism with a minimum of investments.
+                </p>
+              </div>
+              <div class="about__p" data-animate>
+                <p class="_anim">
+                  Nowadays, technology has become part of our lives. For entrepreneurs, keeping pace with these changes is
+                  crucial. We are sure you too want to be up-to-date so you can remain a top decision for your clients.
+                </p>
+              </div>
+              <div class="about__p" data-animate>
+                <p class="_anim">
+                  We have the solution: complete software development and design so you can accelerate your company’s
+                  growth and scale the results. Process automation, data management, high-level security – one team,
+                  everything you need.
+                </p>
+              </div>
             </div>
             <a class="about__btn empty-btn" data-anchor href="#contacts">Lets talk</a>
           </div>
@@ -202,13 +235,13 @@
       <section class="main__services services" id="services">
         <div class="container">
           <div class="services__inner">
-            <div class="services__heading heading">
-              <h3 class="heading__subtitle">Services</h3>
-              <h2 class="heading__title">
+            <div class="services__heading heading" data-animate>
+              <h3 class="heading__subtitle _anim-delay">Services</h3>
+              <h2 class="heading__title _anim">
                 You have a request, <br> we have the best solution
               </h2>
             </div>
-            <div class="services__swiper">
+            <div class="services__swiper _anim-delay" data-animate>
               <div class="swiper-wrapper">
                 <div class="services__slide swiper-slide icon-card">
                   <img src="/images/icons/services/1.png" alt="">
@@ -261,14 +294,14 @@
       <section class="main__stages stages" id="stages">
         <div class="container">
           <div class="stages__inner">
-            <div class="stages__heading heading">
-              <h3 class="heading__subtitle">Stages</h3>
-              <h2 class="heading__title">
+            <div class="stages__heading heading" data-animate="">
+              <h3 class="heading__subtitle _anim-delay">Stages</h3>
+              <h2 class="heading__title _anim">
                 Algorithm of the best <br> software solution
               </h2>
             </div>
             <ol class="stages__list">
-              <li class="stages__item">
+              <li class="stages__item _anim-left" data-animate>
                 <div class="stages__item-num">1</div>
                 <div class="stages__item-body">
                   <h5 class="stages__item-title">
@@ -280,7 +313,7 @@
                   </p>
                 </div>
               </li>
-              <li class="stages__item">
+              <li class="stages__item _anim-left" data-animate>
                 <div class="stages__item-num">2</div>
                 <div class="stages__item-body">
                   <h5 class="stages__item-title">
@@ -292,7 +325,7 @@
                   </p>
                 </div>
               </li>
-              <li class="stages__item">
+              <li class="stages__item _anim-left" data-animate>
                 <div class="stages__item-num">3</div>
                 <div class="stages__item-body">
                   <h5 class="stages__item-title">
@@ -304,11 +337,11 @@
                   </p>
                 </div>
               </li>
-              <li class="stages__item">
+              <li class="stages__item _anim-left" data-animate>
                 <div class="stages__item-num">4</div>
                 <div class="stages__item-body">
                   <h5 class="stages__item-title">
-                    Testing
+                    Support
                   </h5>
                   <p class="stages__item-text">
                     Once we have all details about your business idea, we will develop a personalized action plan to
@@ -316,11 +349,11 @@
                   </p>
                 </div>
               </li>
-              <li class="stages__item">
+              <li class="stages__item _anim-left" data-animate>
                 <div class="stages__item-num">5</div>
                 <div class="stages__item-body">
                   <h5 class="stages__item-title">
-                    Support
+                    Testing
                   </h5>
                   <p class="stages__item-text">
                     Once we have all details about your business idea, we will develop a personalized action plan to
@@ -341,14 +374,14 @@
         </div>
         <div class="container">
           <div class="crypto__inner">
-            <div class="crypto__heading heading">
-              <h3 class="heading__subtitle">Specialized Crypto Services</h3>
-              <h2 class="heading__title">
+            <div class="crypto__heading heading" data-animate>
+              <h3 class="heading__subtitle _anim-delay">Specialized Crypto Services</h3>
+              <h2 class="heading__title _anim">
                 You have a request, <br> we have the best solution
               </h2>
             </div>
-            <ul class="crypto__grid">
-              <li class="crypto__item icon-card">
+            <ul class="crypto__grid" data-animate>
+              <li class="crypto__item icon-card _anim">
                 <img src="/images/icons/crypto-services/1.png" alt="">
                 <h6 class="icon-card__title">Crypto Coin Development</h6>
                 <p class="icon-card__text">
@@ -356,7 +389,7 @@
                   creating your own coin.
                 </p>
               </li>
-              <li class="crypto__item icon-card">
+              <li class="crypto__item icon-card _anim">
                 <img src="/images/icons/crypto-services/2.png" alt="">
                 <h6 class="icon-card__title">Wallet Creation</h6>
                 <p class="icon-card__text">
@@ -364,7 +397,7 @@
                   through constant updates.
                 </p>
               </li>
-              <li class="crypto__item icon-card">
+              <li class="crypto__item icon-card _anim">
                 <img src="/images/icons/crypto-services/3.png" alt="">
                 <h6 class="icon-card__title">Platform Development</h6>
                 <p class="icon-card__text">
@@ -372,7 +405,7 @@
                   user-friendly interface.
                 </p>
               </li>
-              <li class="crypto__item icon-card">
+              <li class="crypto__item icon-card _anim">
                 <img src="/images/icons/crypto-services/4.png" alt="">
                 <h6 class="icon-card__title">Cryptocurrency Exchange Development</h6>
                 <p class="icon-card__text">
@@ -380,7 +413,7 @@
                   fast transactions on the blockchain.
                 </p>
               </li>
-              <li class="crypto__item icon-card">
+              <li class="crypto__item icon-card _anim">
                 <img src="/images/icons/crypto-services/5.png" alt="">
                 <h6 class="icon-card__title">KYC Integration</h6>
                 <p class="icon-card__text">
@@ -388,7 +421,7 @@
                   transactions.
                 </p>
               </li>
-              <li class="crypto__item icon-card">
+              <li class="crypto__item icon-card _anim">
                 <img src="/images/icons/crypto-services/6.png" alt="">
                 <h6 class="icon-card__title">Multi-chain integration</h6>
                 <p class="icon-card__text">
@@ -396,7 +429,7 @@
                   multiple blockchains.
                 </p>
               </li>
-              <li class="crypto__item icon-card">
+              <li class="crypto__item icon-card _anim">
                 <img src="/images/icons/crypto-services/7.png" alt="">
                 <h6 class="icon-card__title">Smart contract</h6>
                 <p class="icon-card__text">
@@ -404,7 +437,7 @@
                   or existing platform.
                 </p>
               </li>
-              <li class="crypto__item icon-card">
+              <li class="crypto__item icon-card _anim">
                 <img src="/images/icons/crypto-services/8.png" alt="">
                 <h6 class="icon-card__title">Automatic conversion rates</h6>
                 <p class="icon-card__text">
@@ -418,49 +451,57 @@
       <section class="main__price price" id="price">
         <div class="container">
           <div class="price__inner">
-            <div class="price__heading heading">
-              <h3 class="heading__subtitle">PRICe</h3>
-              <h2 class="heading__title">
+            <div class="price__heading heading" data-animate>
+              <h3 class="heading__subtitle _anim-delay">PRICe</h3>
+              <h2 class="heading__title _anim">
                 Matching the best price <br> and perfect quality.
               </h2>
             </div>
-            <p class="price__text">
-              We carry out a full assessment of your project with the preparation of a detailed
-              technical specification and business plan. We are focused on long-term cooperation
-              and are interested in your commercial success, so we have fixed prices and a budget.
-            </p>
+            <div class="price__text" data-animate>
+              <p class="price__p">
+                We carry out a full assessment of your project with the preparation of a detailed
+                technical specification and business plan. We are focused on long-term cooperation
+                and are interested in your commercial success, so we have fixed prices and a budget.
+              </p>
+            </div>
           </div>
         </div>
         <div class="price__action-row action-row">
           <div class="container">
             <div class="action-row__inner">
               <ul class="action-row__list">
-                <li class="action-row__item">
-                  <h5 class="action-row__item-title">
-                    Business analytics
-                  </h5>
-                  <div class="action-row__period">
-                    Implementation period <span>14 days</span>
+                <li class="action-row__item" data-animate>
+                  <div class="action-row__item-inner">
+                    <h5 class="action-row__item-title">
+                      Business analytics
+                    </h5>
+                    <div class="action-row__period">
+                      Implementation period <span>14 days</span>
+                    </div>
+                    <div class="action-row__price">Price <span>from $700</span></div>
                   </div>
-                  <div class="action-row__price">Price <span>from $700</span></div>
                 </li>
-                <li class="action-row__item">
-                  <h5 class="action-row__item-title">
-                    Development & Coding
-                  </h5>
-                  <div class="action-row__period">
-                    Implementation period <span>14-18 days</span>
+                <li class="action-row__item" data-animate>
+                  <div class="action-row__item-inner">
+                    <h5 class="action-row__item-title">
+                      Development & Coding
+                    </h5>
+                    <div class="action-row__period">
+                      Implementation period <span>14-18 days</span>
+                    </div>
+                    <div class="action-row__price">Price <span>from $3 900</span></div>
                   </div>
-                  <div class="action-row__price">Price <span>from $3 900</span></div>
                 </li>
-                <li class="action-row__item">
-                  <h5 class="action-row__item-title">
-                    Design & layout
-                  </h5>
-                  <div class="action-row__period">
-                    Implementation period <span>7-10 days</span>
-                  </div>
-                  <div class="action-row__price">Price <span>from $1 100</spa>
+                <li class="action-row__item" data-animate>
+                  <div class="action-row__item-inner">
+                    <h5 class="action-row__item-title">
+                      Design & layout
+                    </h5>
+                    <div class="action-row__period">
+                      Implementation period <span>7-10 days</span>
+                    </div>
+                    <div class="action-row__price">Price <span>from $1 100</spa>
+                    </div>
                   </div>
                 </li>
                 <li class="action-row__item">
@@ -481,18 +522,24 @@
       <section class="main__portfolio portfolio" id="portfolio">
         <div class="container">
           <div class="portfolio__inner">
-            <div class="portfolio__heading heading">
-              <h3 class="heading__subtitle">Portfolio</h3>
-              <h2 class="heading__title">
+            <div class="portfolio__heading heading" data-animate>
+              <h3 class="heading__subtitle _anim-delay">Portfolio</h3>
+              <h2 class="heading__title _anim">
                 Trusted by tens of companies over the
                 world, our work is solely based on
                 experience and tailored consultancy.
               </h2>
             </div>
             <ul class="portfolio__logos">
-              <img src="/images/icons/logos/logos.png" alt="Logos of companies">
-              <!-- <li class="portfolio__logo">
-                        </li> -->
+              <li class="portfolio__logo _anim" data-animate>
+                <img src="/images/icons/logos/partners/ca-light.jpg" alt="CALIN & AssociateS logo">
+              </li>
+              <li class="portfolio__logo _anim" data-animate>
+                <img src="/images/icons/logos/partners/px-dark.png" alt="ProfiXone logo">
+              </li>
+              <li class="portfolio__logo _anim" data-animate>
+                <img src="/images/icons/logos/partners/revo-light.png" alt="REVOLUTIONMEDIA logo">
+              </li>
             </ul>
           </div>
         </div>
@@ -500,28 +547,29 @@
       <section class="main__contacts contacts" id="contacts">
         <div class="container">
           <div class="contacts__inner">
-            <div class="contacts__heading">
-              <h2 class="contacts__title">
-                Задайте нам вопрос
+            <div class="contacts__heading" data-animate>
+              <h2 class="contacts__title _anim">
+                Ask us a question.
               </h2>
-              <p class="contacts__text">
-                Оставьте заявку, задайте вопрос и наши менеджеры
-                свяжуться с вами в ближайшее время.
+              <p class="contacts__text _anim-delay">
+                Leave a request, ask a question and our managers will contact you soon.
               </p>
             </div>
-            <form class="contacts__form">
-              <input class="contacts__input" type="text" placeholder="Имя" required>
+            <form class="contacts__form _anim-left" data-animate action="" name="questions">
+              <input class="contacts__input" type="text" placeholder="Name" required>
               <input class="contacts__input" type="email" placeholder="E-mail" required>
-              <textarea class="contacts__textarea" placeholder="Ваш вопрос..." required></textarea>
-              <button class="contacts__btn btn" type="submit"><span>Отправить</spa></button>
+              <textarea class="contacts__textarea" placeholder="Your question..." required></textarea>
+              <button class="contacts__btn btn" type="submit">
+                <span>Send</span>
+              </button>
             </form>
           </div>
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" data-animate>
       <div class="container">
-        <div class="footer__inner">
+        <div class="footer__inner _anim">
           <a class="footer__logo logo" data-anchor href="#body">
             <img src="/images/icons/logos/footer-logo.png" alt="Logo ProfixSoft">
           </a>

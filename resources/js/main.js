@@ -1,22 +1,27 @@
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Autoplay, Navigation } from 'swiper';
 
 (function () {
-
-
   // Обратная связь битрикса
-    (function(w, d, u) {
-      var s = d.createElement('script');
-      s.async = true;
-      s.src = u + '?' + (Date.now() / 60000 | 0);
-      var h = d.getElementsByTagName('script')[0];
-      h.parentNode.insertBefore(s, h);
-    })(window, document, 'https://cdn-ru.bitrix24.ru/b17190490/crm/site_button/loader_3_4th6bg.js');
+  (function (w, d, u) {
+    var s = d.createElement('script');
+    s.async = true;
+    s.src = u + '?' + (Date.now() / 60000 | 0);
+    var h = d.getElementsByTagName('script')[0];
+    h.parentNode.insertBefore(s, h);
+  })(window, document, 'https://cdn-ru.bitrix24.ru/b17190490/crm/site_button/loader_3_4th6bg.js');
 
   // Слайдер в сервисах
   const swiper = new Swiper('.services__swiper', {
-    modules: [Navigation],
+    modules: [Navigation, Autoplay],
     slidesPerView: 1,
     spaceBetween: 25,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    speed: 800,
     navigation: {
       prevEl: '.services__prev',
       nextEl: '.services__next',
@@ -167,5 +172,66 @@ import Swiper, { Navigation } from 'swiper';
     })
   }
   document.addEventListener('click', smoothScrollToAnchor)
+
+  // Появление кнопки вверх
+  window.addEventListener('scroll', showUpBtn)
+
+  function showUpBtn() {
+    const upBtn = document.querySelector('.up-btn')
+    if (window.pageYOffset > document.documentElement.clientHeight / 2) {
+      upBtn.classList.add('up-btn--show')
+    } else {
+      upBtn.classList.remove('up-btn--show')
+    }
+  }
+
+  // Плавное появление элементов при скролле
+
+  const animItems = document.querySelectorAll('[data-animate]')
+
+  if (animItems.length > 0) {
+    window.addEventListener('scroll', animOnScroll)
+    function animOnScroll() {
+      for (let animItem of animItems) {
+        const animItemHeight = animItem.offsetHeight
+        const animItemOffset = offset(animItem).top
+        const animItemStartIndex = 4
+
+        let animItemPoint = document.documentElement.clientHeight - animItemHeight / animItemStartIndex
+        if (animItemHeight > document.documentElement.clientHeight) {
+          animItemPoint = document.documentElement.clientHeight - document.documentElement.clientHeight / animItemStartIndex
+        }
+
+        if (window.pageYOffset > animItemOffset - animItemPoint && window.pageYOffset < animItemOffset + animItemHeight) {
+          animItem.classList.add('_active')
+        } else {
+          if (animItem.dataset.animate !== 'no-hide') {
+            animItem.classList.remove('_active')
+          }
+        }
+      }
+    }
+    function offset(el) {
+      const rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+    }
+    setTimeout(() => animOnScroll(), 300);
+  }
+
+  // Форма
+  const form = document.forms.questions
+  const submit = document.querySelector('.submit')
+  form.addEventListener('submit', () => {
+    if (!submit) return
+    submit.classList.add('submit--show')
+  })
+  // Попап
+  submit.addEventListener('click', (e) => {
+    const target = e.target.closest('.submit__window-btn') || e.target.closest('.submit__overlay')
+    if (!target) return
+    submit.classList.remove('submit--show')
+  })
 
 })()

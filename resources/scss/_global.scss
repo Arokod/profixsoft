@@ -73,6 +73,12 @@ body {
   }
   &__logo-mobile {
     display: none;
+    img {
+      width: 270px;
+      @media (min-width: 320px) and (max-width: 1100px) {
+        width: calc(140px + (270 - 140) * ((100vw - 320px) / (1100 - 320)));
+      }
+    }
   }
   &__menu {
     display: grid;
@@ -81,6 +87,12 @@ body {
   }
   &__logo {
     margin-right: 15px;
+    img {
+      width: 270px;
+      @media (min-width: 1100px) and (max-width: 1470px) {
+        width: calc(200px + (270 - 200) * ((100vw - 1100px) / ($maxWidthContainer - 1100)));
+      }
+    }
   }
   &__nav {
     grid-column: 3 / -3;
@@ -111,7 +123,7 @@ body {
   &__hero {
     position: relative;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
   }
   &__burger {
     display: none;
@@ -126,11 +138,11 @@ body {
   align-items: center;
   justify-content: flex-end;
   padding-right: 15px;
-  transition: all .2s;
+  transition: all 0.2s;
   &__inner {
     position: relative;
     padding: 7px 0;
-    transition: all .2s .4s;
+    transition: all 0.2s 0.4s;
     &::before,
     &::after,
     span {
@@ -138,7 +150,7 @@ body {
       width: 50px;
       height: 2px;
       background-color: #fff;
-      transition: all .2s .2s, opacity .2s .2s, background .5s, width .2s .6s;
+      transition: all 0.2s 0.2s, opacity 0.2s 0.2s, background 0.5s, width 0.2s 0.6s;
     }
     &::before,
     &::after {
@@ -159,22 +171,22 @@ body {
       &::after,
       span {
         background-color: $yellow;
-        transition: all .2s .2s, opacity .2s .2s, background .2s, width .2s .6s;
+        transition: all 0.2s 0.2s, opacity 0.2s 0.2s, background 0.2s, width 0.2s 0.6s;
       }
     }
   }
   &--active {
     height: 60px;
-    transition: all .2s;
+    transition: all 0.2s;
     .burger__inner {
       padding: 0;
-      transition: all .2s .4s;
+      transition: all 0.2s 0.4s;
       &::before,
       &::after,
       span {
         width: 30px;
         background-color: $dark;
-        transition: all .2s .6s, opacity .2s .6s, background .5s, width .2s .2s;
+        transition: all 0.2s 0.6s, opacity 0.2s 0.6s, background 0.5s, width 0.2s 0.2s;
       }
       &::before {
         transform: rotate(45deg);
@@ -192,7 +204,7 @@ body {
         &::after,
         span {
           background-color: $yellow;
-          transition: all .2s .6s, opacity .2s .6s, background .2s, width .2s .2s;
+          transition: all 0.2s 0.6s, opacity 0.2s 0.6s, background 0.2s, width 0.2s 0.2s;
         }
       }
     }
@@ -289,6 +301,57 @@ body {
   }
 }
 
+._anim {
+  transform: translateY(-5vw);
+  opacity: 0;
+  transition: all .8s;
+  &._active,
+  ._active & {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+._anim-delay {
+  transform: translateY(-5vw);
+  opacity: 0;
+  transition: all .8s .3s;
+  &._active,
+  ._active & {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+._anim-right {
+  transform: translateX(10vw);
+  opacity: 0;
+  transition: all .8s;
+  &._active,
+  ._active & {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+._anim-left {
+  transform: translateX(-10vw);
+  opacity: 0;
+  transition: all .8s;
+  &._active,
+  ._active & {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+._anim-right-delay {
+  transform: translateX(10vw);
+  opacity: 0;
+  transition: all .8s .3s;
+  &._active,
+  ._active & {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
 .heading {
   &__subtitle {
     text-transform: uppercase;
@@ -301,6 +364,7 @@ body {
 }
 
 .empty-btn {
+  background: transparent;
   font-size: rem(16);
   text-transform: uppercase;
   border: 1px solid $dark;
@@ -352,6 +416,66 @@ body {
       opacity: 1;
       transition: all 0.2s;
     }
+  }
+}
+
+.up-btn {
+  @extend %gradient;
+  position: fixed;
+  @include adaptiveValue("right", 55, 15);
+  @include adaptiveValue("bottom", 55, 15);
+  z-index: 25;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: all .8s;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/images/icons/angle-right.png') 54% 50% / auto 20px no-repeat;
+    transform: rotate(-90deg);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background-image: linear-gradient(0deg, #ffd201, #ffa800);
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  &:hover {
+    &::before {
+      opacity: 1;
+      transition: all 0.2s;
+    }
+  }
+  &--show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+    transition: all .3s;
+  }
+}
+
+[dir="ltr"] {
+  left: 55px !important;
+  @media (max-width: 1470px) {
+    left: calc(10px + (55 - 10) * ((100vw - 320px) / ($maxWidthContainer - 320))) !important;
+  }
+  bottom: 55px !important;
+  @media (max-width: 1470px) {
+    bottom: calc(10px + (55 - 10) * ((100vw - 320px) / ($maxWidthContainer - 320))) !important;
   }
 }
 
