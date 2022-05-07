@@ -21,6 +21,8 @@ if (array_key_exists($locale, config('languages'))) {
     $locale = null;
 }
 
+Route::post('contact', [\App\Http\Controllers\ContactController::class, 'store'])->name('contact');
+
 Route::group(array('prefix' => $locale), function () {
     Route::view('/', 'welcome');
 
