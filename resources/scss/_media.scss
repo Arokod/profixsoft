@@ -112,6 +112,12 @@
       margin-top: -30vh;
     }
   }
+  // -----------------------------------------
+  .home-hero {
+    &__inner {
+      padding: 65px 0 30vh;
+    }
+  }
 }
 
 // =========================================== 950 ==================================================
@@ -141,6 +147,14 @@
   .action-row {
     &__item {
       flex-basis: 100%;
+      @for $var from 1 to 4 {
+        $delay: ($var - 1) * 0;
+        &:nth-child(#{$var}) {
+          .action-row__item-inner {
+            transition-delay: #{$delay + s};
+          }
+        }
+      }
     }
     &__period {
       margin: 0;
@@ -177,10 +191,25 @@
     &__grid {
       grid-template: auto / auto;
     }
+    &__item {
+      @include oneByOne(8, 0);
+    }
   }
   //------------------------------------------
   .price {
     background-size: contain;
+  }
+  //------------------------------------------
+  .portfolio {
+    &__logos {
+      flex-wrap: wrap;
+      margin: 0 -15px -30px;
+    }
+    &__logo {
+      flex-basis: 50%;
+      padding: 0 15px;
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -210,6 +239,7 @@
     &__prev,
     &__next {
       top: auto;
+      height: 80px;
     }
     &__prev {
       right: 50%;
@@ -229,6 +259,9 @@
     &__inner {
       grid-template: auto / auto;
     }
+    &__quick-list {
+      grid-template-columns: auto;
+    }
   }
 }
 
@@ -236,6 +269,12 @@
 // =========================================== 450 ==================================================
 
 @media (max-width: 450px) {
+  .header {
+    &__menu {
+      width: 100%;
+    }
+  }
+  // -----------------------------------------
   .action-row {
     &__period {
       margin-bottom: 10px;
@@ -245,6 +284,15 @@
       span {
         display: block;
       }
+    }
+  }
+  //------------------------------------------
+  .portfolio {
+    &__logos {
+      justify-content: center;
+    }
+    &__logo {
+      flex-basis: 60%;
     }
   }
 }

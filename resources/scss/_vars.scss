@@ -43,6 +43,15 @@ $maxWidthContainer: 1470;
   }
 }
 
+@mixin oneByOne($num, $s) {
+  @for $var from 1 to ($num + 1) {
+    $delay: ($var - 1) * $s;
+    &:nth-child(#{$var}) {
+      transition-delay: #{$delay + s};
+    }
+  }
+}
+
 %m-700 {
   font-family: Montserrat, sans-serif;
   font-weight: 700;
