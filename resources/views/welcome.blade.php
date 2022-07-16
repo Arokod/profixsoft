@@ -59,6 +59,9 @@
                                         <a class="header__nav-link" data-anchor href="#services">Services</a>
                                     </li>
                                     <li class="header__nav-item">
+                                        <a class="header__nav-link" data-anchor href="#opport">Opportunities</a>
+                                    </li>
+                                    <li class="header__nav-item">
                                         <a class="header__nav-link" data-anchor href="#stages">Stages</a>
                                     </li>
                                     <li class="header__nav-item">
@@ -291,6 +294,93 @@
                     </div>
                 </div>
             </section>
+            <section class="main__opport opport" id="opport">
+                <div class="container">
+                    <div class="opport__heading heading" data-animate>
+                        <h3 class="heading__subtitle _anim-delay">
+                            Opportunities
+                        </h3>
+                        <h2 class="heading__title _anim">
+                            What do we offer?
+                        </h2>
+                    </div>
+                    <ul class="opport__offers">
+                        <li class="opport__col _anim" data-animate>
+                            <h5 class="opport__col-title">
+                                Turnkey work
+                            </h5>
+                            <div class="opport__col-text">
+                                <p>
+                                    We provide a unique turnkey development individually for you. We do not work according to templates, but independently develop any product. We are fully responsible for our work.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="opport__col _anim" data-animate>
+                            <h5 class="opport__col-title">
+                                Tools
+                            </h5>
+                            <div class="opport__col-text">
+                                <div class="opport__col-text-item">
+                                    <span>
+                                        Back End:
+                                    </span>
+                                    PHP, Laravel framework, Golang(for bottlenecks)
+                                </div>
+                                <div class="opport__col-text-item">
+                                    <span>
+                                        Front End:
+                                    </span>
+                                    HTML / CSS / JavaScript / jQuery / Axios / Vue.js
+                                </div>
+                                <div class="opport__col-text-item">
+                                    <span>
+                                        BD:
+                                    </span>
+                                    MySQL, PostgreSQL
+                                </div>
+                                <div class="opport__col-text-item">
+                                    <span>
+                                        Other:
+                                    </span>
+                                    Git
+                                </div>
+                            </div>
+                        </li>
+                        <li class="opport__col _anim" data-animate>
+                            <h5 class="opport__col-title">
+                                Security
+                            </h5>
+                            <div class="opport__col-text">
+                                <p>
+                                    CSRF, protected from SQL injections.
+                                </p>
+                                <p>
+                                    We work strictly according to protocols.
+                                </p>
+                                <p>
+                                    We configure the server individually, which provides the greatest protection.
+                                </p>
+                                <p>
+                                    We configureCloudflare, which avoids DDoS attacks.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="opport__col _anim" data-animate>
+                            <h5 class="opport__col-title">
+                                Warranty, technical support
+                            </h5>
+                            <div class="opport__col-text">
+                                <p>
+                                    We provide warranty support for the product.
+                                </p>
+                                <p>
+                                    Additionally, we connect technical support. It includes a certain list of services necessary for the full functionality of your product.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
             <section class="main__stages stages" id="stages">
                 <div class="container">
                     <div class="stages__inner">
@@ -478,7 +568,7 @@
                                         <div class="action-row__period">
                                             Implementation period <span>14 days</span>
                                         </div>
-                                        <div class="action-row__price">Price <span>from $700</span></div>
+                                        <div class="action-row__price">Price <span>from $1700</span></div>
                                     </div>
                                 </li>
                                 <li class="action-row__item" data-animate>
@@ -489,7 +579,7 @@
                                         <div class="action-row__period">
                                             Implementation period <span>14-18 days</span>
                                         </div>
-                                        <div class="action-row__price">Price <span>from $3 900</span></div>
+                                        <div class="action-row__price">Price <span>from $4 900</span></div>
                                     </div>
                                 </li>
                                 <li class="action-row__item" data-animate>
@@ -500,7 +590,7 @@
                                         <div class="action-row__period">
                                             Implementation period <span>7-10 days</span>
                                         </div>
-                                        <div class="action-row__price">Price <span>from $1 100</spa>
+                                        <div class="action-row__price">Price <span>from $2 100</spa>
                                         </div>
                                     </div>
                                 </li>
